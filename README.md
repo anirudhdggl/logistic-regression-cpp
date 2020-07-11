@@ -151,6 +151,5 @@ You may install git if required. Then navigate to the folder that is created for
 This should work fine but still if run into some issues just make sure that you have g++ installed and executable permissions set to *.o* files. Although I don't think any such issue would ever arise.
 
 <p>&nbsp;</p>
-<p>&nbsp;</p>
 
 > If you find any improvement you can make, you are welcome to do so and for any issues and queries you can straight away mail me.
