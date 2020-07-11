@@ -32,7 +32,7 @@ First things first, the code has a few global variables,
 | InputValues vector    | This vector will store all the different input values read from the dataset and to be used in training phase                           |
 | ExpectedOutput vector | This vector will store all the actual outputs that our model will aim to achieve during the training phase                             |
 
-(https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/Global%20variables.png)
+![alt text](https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/Global%20variables.png)
 
 The functions, *other than main function*, that we'll be using in this code are
 
@@ -43,17 +43,17 @@ The functions, *other than main function*, that we'll be using in this code are
 |calculateAccuracy() | This function is used to calculate the accuracy of our model on the training data itself              |
 |test()              | At the end if you wish to predict some output using this model, this test function can be used for it |
 
-(https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/functionsInvolved.png)
+![alt text](https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/functionsInvolved.png)
 
 ## Working of the model
 
 The **main()** function will begin it's execution by reading the dataset into the respective vectors. Once done, it will go on to run training step epoch number of times.
 
-(https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/epoch.png)
+![alt text](https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/epoch.png)
 
 For each step, or epoch, it will calculate the value of *z*, or the aggregate input for the next layer and passes it to the **activation()** function.
 
-(https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/activationFunction.png)
+![alt text](https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/activationFunction.png)
 
 *z* is calculated as the sum of products of all the inputs with their respective weights, i.e., product of *input[i]* and *weight[i]* and then adding all of those products together.
 
@@ -61,7 +61,7 @@ Activation function then predicts the value using the sigmoid function.
 
 After the prediction, all the weights are updated accordingly.
 
-(https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/updateWeight.png)
+![alt text](https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/updateWeight.png)
 
 In each epoch we predict the *present* accuracy of the model, to analyze later how well the model is performing. It basically gives us 100% accuracy in the 9th epoch.
 
@@ -77,7 +77,7 @@ Once all of the epochs are done, we then can test the model using our test funct
 
 If you are using windows, simply clone or download the repo into your system using the green button.
 
-(https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/cloneButton.png)
+![alt text](https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/cloneButton.png)
 
 Once done you can then use **[VSCode's developer console](https://docs.microsoft.com/en-us/cpp/build/walkthrough-compiling-a-native-cpp-program-on-the-command-line?view=vs-2019 "Run C++ Code in windows")**
 
