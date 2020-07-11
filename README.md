@@ -8,20 +8,30 @@ This repository aims at providing such sort of knowledge about neural networks w
 
 To maintain the simplicity, we'll be using a simple neural network with 4 input neurons and one output neuron. Moreover for ease and to keep things comprehensible, the output classes of the Iris dataset have been reduced to 2 from 3.
 
+<p>&nbsp;</p>
+
 ## Points to remember
 
 * This is the most basic model, with no hidden layers. In real life scenario, you can have multiple hidden layers
 * This model does not use a test set for simplicity purposes. You can however split the training set into training and test set too
 * The dataset used is available on kaggle and has 3 classes but we'll be using only 2 of those, *again for simplicity purposes*
 
+<p>&nbsp;</p>
+
 ## Pre-requisites
 
 * A basic knowledge and overview of logistic regression **[Overview of Logistic Regression](https://towardsdatascience.com/logistic-regression-the-basics-b1716661c71b "Basics of Logistic Regression")**
 * You must be familiar with neural networks a bit **[Overview of Neural network](https://towardsdatascience.com/a-gentle-introduction-to-neural-networks-series-part-1-2b90b87795bc "Basics of Neural networks")**
 
+<p>&nbsp;</p>
+
 ## Overview of the code
 
+<p>&nbsp;</p>
+
 First things first, the code has a few global variables,
+
+<p>&nbsp;</p>
 
 | Global Variable       | Purpose                                                                                                                                |
 |:---------------------:|:--------------------------------------------------------------------------------------------------------------------------------------:|
@@ -32,9 +42,15 @@ First things first, the code has a few global variables,
 | InputValues vector    | This vector will store all the different input values read from the dataset and to be used in training phase                           |
 | ExpectedOutput vector | This vector will store all the actual outputs that our model will aim to achieve during the training phase                             |
 
+<p>&nbsp;</p>
+
 ![alt text](https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/Global%20variables.png)
 
+<p>&nbsp;</p>
+
 The functions, *other than main function*, that we'll be using in this code are
+
+<p>&nbsp;</p>
 
 | Function name      | Description                                                                                           |
 |:------------------:|:-----------------------------------------------------------------------------------------------------:|
@@ -43,17 +59,29 @@ The functions, *other than main function*, that we'll be using in this code are
 |calculateAccuracy() | This function is used to calculate the accuracy of our model on the training data itself              |
 |test()              | At the end if you wish to predict some output using this model, this test function can be used for it |
 
+<p>&nbsp;</p>
+
 ![alt text](https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/functionsInvolved.png)
+
+<p>&nbsp;</p>
 
 ## Working of the model
 
 The **main()** function will begin it's execution by reading the dataset into the respective vectors. Once done, it will go on to run training step epoch number of times.
 
+<p>&nbsp;</p>
+
 ![alt text](https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/epoch.png)
+
+<p>&nbsp;</p>
 
 For each step, or epoch, it will calculate the value of *z*, or the aggregate input for the next layer and passes it to the **activation()** function.
 
+<p>&nbsp;</p>
+
 ![alt text](https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/activationFunction.png)
+
+<p>&nbsp;</p>
 
 *z* is calculated as the sum of products of all the inputs with their respective weights, i.e., product of *input[i]* and *weight[i]* and then adding all of those products together.
 
@@ -61,23 +89,37 @@ Activation function then predicts the value using the sigmoid function.
 
 After the prediction, all the weights are updated accordingly.
 
+<p>&nbsp;</p>
+
 ![alt text](https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/updateWeight.png)
 
 In each epoch we predict the *present* accuracy of the model, to analyze later how well the model is performing. It basically gives us 100% accuracy in the 9th epoch.
 
 Once all of the epochs are done, we then can test the model using our test function.
 
+<p>&nbsp;</p>
+
 **Note:** *All the predicted values are rounded up to give us either class 0 or class 1*
 
-(https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/roundOff.png)
+<p>&nbsp;</p>
+
+![alt text](https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/roundOff.png)
+
+<p>&nbsp;</p>
 
 ## How to run the code
+
+<p>&nbsp;</p>
 
 **For windows**
 
 If you are using windows, simply clone or download the repo into your system using the green button.
 
+<p>&nbsp;</p>
+
 ![alt text](https://github.com/anirudhdggl/logistic-regression-cpp/blob/master/docs/images/cloneButton.png)
+
+<p>&nbsp;</p>
 
 Once done you can then use **[VSCode's developer console](https://docs.microsoft.com/en-us/cpp/build/walkthrough-compiling-a-native-cpp-program-on-the-command-line?view=vs-2019 "Run C++ Code in windows")**
 
@@ -90,6 +132,8 @@ This will create an *.obj* and a *.exe* file for you. Next to run the compiled e
 `logistic`
 
 and hit enter. And **kaboom!!** It works
+
+<p>&nbsp;</p>
 
 **For UNIX based systems**
 
@@ -105,5 +149,8 @@ You may install git if required. Then navigate to the folder that is created for
 ./logistic.o`
 
 This should work fine but still if run into some issues just make sure that you have g++ installed and executable permissions set to *.o* files. Although I don't think any such issue would ever arise.
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 > If you find any improvement you can make, you are welcome to do so and for any issues and queries you can straight away mail me.
